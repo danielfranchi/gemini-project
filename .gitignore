@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Output directories
+dist/
+build/
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# IDE configuration files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
