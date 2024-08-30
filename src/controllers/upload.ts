@@ -29,14 +29,14 @@ export async function handleUpload(req: Request, res: Response) {
     const clientCodeMatch = responseText.match(/Client Code:\s*([\w\s]+)/);
 
     const measurementNumber = measurementNumberMatch ? measurementNumberMatch[1] : 'Not available';
-    const measurementType = measurementTypeMatch ? measurementTypeMatch[1].trim() : 'Not available'; // Remove espaços em branco
-    const clientCode = clientCodeMatch ? clientCodeMatch[1].trim() : 'Not available'; // Remove espaços em branco
+    const measurementType = measurementTypeMatch ? measurementTypeMatch[1].trim() : 'Not available';
+    const clientCode = clientCodeMatch ? clientCodeMatch[1].trim() : 'Not available';
 
     const measureUuid = uuidv4();
 
     res.json({
       image_url: imageUrl,
-      measure_value: parseInt(measurementNumber), // Assumindo que o valor numérico é extraído da medição
+      measure_value: parseInt(measurementNumber),
       measure_uuid: measureUuid,
     });
   } catch (error) {
